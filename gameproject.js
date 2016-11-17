@@ -7,21 +7,6 @@ var foodY
 var foodX2
 var foodY2
 
-.addEventListener("click", function (e) {
-  var player1 = document.getElementById("dog")
-  var food1 = document.getElementById("food1")
-
-  playerX = Number(player1.getAttribute("x"))
-  playerY = Number(player1.getAttribute("y"))
-
-  foodX = Number(food1.getAttribute("x"))
-  foodY = Number(food1.getAttribute("y"))
-
-  if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-    player1.setAttribute("fill", "red")
-    food1.setAttribute("fill", "red")
-  }
-
 var xpos = 250
 var ypos = 20
 document.addEventListener("keydown", function(e) {
@@ -57,6 +42,10 @@ foodY2 = Number(food2.getAttribute("y"))
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
   food1.setAttribute("fill", "red")
+  food2.setAttribute("fill", "red")
 
+  else {
+    food1.setAttribute("fill", "green")
+    food2.setAttribute("fill", "green")
 
- })
+})
