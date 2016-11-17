@@ -1,11 +1,15 @@
 
+function randomNumber(min,max)
+{
+ return Math.floor(Math.random()*(max-min+1)+min);
+}
+
 var width = 60
 var height = 60
 var playerX
 var playerY
 var foodX
 var foodY
-
 
 var xpos = 250
 var ypos = 20
@@ -36,8 +40,10 @@ playerY = Number(player1.getAttribute("y"))
 foodX = Number(food1.getAttribute("x"))
 foodY = Number(food1.getAttribute("y"))
 
+var rand = randomNumber(10,800);
+
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  food1.setAttribute("x", 10)
+  food1.setAttribute("x", "rand")
 }
   else {
   food1.setAttribute("fill", "green")
