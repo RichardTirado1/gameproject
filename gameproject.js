@@ -1,6 +1,6 @@
 
-var width = 80
-var height = 80
+var width = 60
+var height = 60
 var playerX
 var playerY
 var foodX
@@ -37,7 +37,7 @@ foodX = Number(food1.getAttribute("x"))
 foodY = Number(food1.getAttribute("y"))
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  food1.setAttribute("fill", "red")
+  food1.setAttribute("x", 10)
 }
   else {
   food1.setAttribute("fill", "green")
