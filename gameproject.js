@@ -34,8 +34,8 @@ document.getElementById("dog").setAttribute("y", ypos + 15)
 var player1 = document.getElementById("dog")
 var food1 = document.getElementById("food1")
 
-playerX = Number(player1.getAttribute("x"))
-playerY = Number(player1.getAttribute("y"))
+playerX = Number(player1.getAttribute("x")) + 25
+playerY = Number(player1.getAttribute("y")) + 25
 
 foodX = Number(food1.getAttribute("x"))
 foodY = Number(food1.getAttribute("y"))
