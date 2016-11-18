@@ -43,10 +43,22 @@ foodY = Number(food1.getAttribute("y"))
 var rand = randomNumber(10,800);
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  food1.setAttribute("x", "rand")
+  food1.setAttribute("x", rand)
 }
-  else {
+
+else {
   food1.setAttribute("fill", "green")
+}
+
+foodX = Number(food2.getAttribute("x"))
+foodY = Number(food2.getAttribute("y"))
+
+if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
+  food2.setAttribute("x", rand)
+}
+
+else {
+  food2.setAttribute("fill", "green")
 }
 
 })
