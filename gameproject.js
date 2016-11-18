@@ -11,7 +11,7 @@ var playerY
 var foodX
 var foodY
 
-var xpos = 250
+var xpos = 350
 var ypos = 20
 document.addEventListener("keydown", function(e) {
  if (e.keyCode == 37) {
