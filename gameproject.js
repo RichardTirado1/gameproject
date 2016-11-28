@@ -10,6 +10,7 @@ var playerX
 var playerY
 var foodX
 var foodY
+var foodEaten = 0
 
 var xpos = 350
 var ypos = 20
@@ -44,6 +45,7 @@ var rand = randomNumber(10,800);
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
   food1.setAttribute("x", rand)
+  food1.setAttribute(+1, foodEaten)
 }
 
 else {
@@ -55,6 +57,7 @@ foodY = Number(food2.getAttribute("y"))
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
   food2.setAttribute("x", rand)
+  food2.setAttribute(+1, foodEaten)
 }
 
 else {
