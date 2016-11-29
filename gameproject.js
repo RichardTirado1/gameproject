@@ -7,7 +7,7 @@ function randomNumber(min,max)
 var width = 60
 var height = 60
 var playerX
-var playerY
+var playerY 
 var foodX
 var foodY
 var foodEaten = 0
