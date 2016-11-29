@@ -11,6 +11,8 @@ var playerY
 var foodX
 var foodY
 var foodEaten = 0
+var timeStart = Date.now()
+var timeStop = Date.now
 
 var xpos = 350
 var ypos = 20
@@ -64,6 +66,11 @@ if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < f
 
 else {
   food2.setAttribute("fill", "green")
+}
+
+if (foodEaten > 5) {
+  document.getElementById("screen").pauseAnimations()
+  document.getElementById("duration").innerHTML = timeStop - timeStart
 }
 
 })
