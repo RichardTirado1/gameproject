@@ -7,7 +7,7 @@ function randomNumber(min,max)
 var width = 60
 var height = 60
 var playerX
-var playerY 
+var playerY
 var foodX
 var foodY
 var foodEaten = 0
@@ -43,7 +43,7 @@ playerY = Number(player1.getAttribute("y")) + 25
 foodX = Number(food1.getAttribute("x"))
 foodY = Number(food1.getAttribute("y"))
 
-var rand = randomNumber(10,800);
+var rand = randomNumber(10,725);
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
   food1.setAttribute("x", rand)
