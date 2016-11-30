@@ -12,7 +12,6 @@ var foodX
 var foodY
 var foodEaten = 0
 var timeStart = Date.now()
-var timeStop = Date.now
 
 var xpos = 350
 var ypos = 20
@@ -69,6 +68,7 @@ else {
 }
 
 if (foodEaten > 5) {
+  var timeStop = Date.now()
   document.getElementById("screen").pauseAnimations()
   document.getElementById("duration").innerHTML = timeStop - timeStart
 }
