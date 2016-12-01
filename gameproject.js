@@ -67,7 +67,7 @@ else {
   food2.setAttribute("fill", "green")
 }
 
-if (foodEaten > 5) {
+if (foodEaten == 5) {
   var timeStop = Date.now()
   document.getElementById("screen").pauseAnimations()
   document.getElementById("duration").innerHTML = (timeStop - timeStart) / 1000
