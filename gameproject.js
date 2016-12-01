@@ -70,7 +70,7 @@ else {
 if (foodEaten > 5) {
   var timeStop = Date.now()
   document.getElementById("screen").pauseAnimations()
-  document.getElementById("duration").innerHTML = timeStop - timeStart
+  document.getElementById("duration").innerHTML = (timeStop - timeStart) / 1000
 }
 
 })
