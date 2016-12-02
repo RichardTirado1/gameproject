@@ -3,7 +3,7 @@ function randomNumber(min,max)
 {
  return Math.floor(Math.random()*(max-min+1)+min);
 }
-
+var foodSpeed = 5
 var width = 60
 var height = 60
 var playerX
@@ -45,9 +45,12 @@ foodY = Number(food1.getAttribute("y"))
 var rand = randomNumber(10,725);
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
+  foodSpeed =- .5
   food1.setAttribute("x", rand)
   foodEaten = foodEaten + 1
   document.getElementById("foodScore").innerHTML = foodEaten
+  document.getElementById("5to325").setAttribute("dur" , foodSpeed)
+  document.getElementById("325to5").setAttribute("dur" , foodSpeed)
 }
 
 else {
@@ -58,10 +61,14 @@ foodX = Number(food2.getAttribute("x"))
 foodY = Number(food2.getAttribute("y"))
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
+  foodSpeed =- .5
   food2.setAttribute("x", rand)
   foodEaten = foodEaten + 1
   document.getElementById("foodScore").innerHTML = foodEaten
+  document.getElementById("1").setAttribute("dur" , foodSpeed)
+  document.getElementById("2").setAttribute("dur" , foodSpeed)
 }
+
 
 else {
   food2.setAttribute("fill", "green")
@@ -72,5 +79,4 @@ if (foodEaten == 5) {
   document.getElementById("screen").pauseAnimations()
   document.getElementById("duration").innerHTML = (timeStop - timeStart) / 1000
 }
-
 })
