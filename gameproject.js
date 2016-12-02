@@ -45,7 +45,7 @@ foodY = Number(food1.getAttribute("y"))
 var rand = randomNumber(10,725);
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  foodSpeed =- .5
+  foodSpeed -= 2
   food1.setAttribute("x", rand)
   foodEaten = foodEaten + 1
   document.getElementById("foodScore").innerHTML = foodEaten
@@ -61,12 +61,12 @@ foodX = Number(food2.getAttribute("x"))
 foodY = Number(food2.getAttribute("y"))
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  foodSpeed =- .5
+  foodSpeed -= 2
   food2.setAttribute("x", rand)
   foodEaten = foodEaten + 1
   document.getElementById("foodScore").innerHTML = foodEaten
-  document.getElementById("1").setAttribute("dur" , foodSpeed)
-  document.getElementById("2").setAttribute("dur" , foodSpeed)
+  document.getElementById("moving1").setAttribute("dur" , foodSpeed)
+  document.getElementById("moving2").setAttribute("dur" , foodSpeed)
 }
 
 
